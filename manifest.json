@@ -1,0 +1,15 @@
+{
+  "name": "Lat Long extension",
+  "version": "1.0",
+  "description": "Shows lat long of a clicked position",
+  "permissions": ["webNavigation", "activeTab", "tabs", "<all_urls>"],
+  "web_accessible_resources": ["inject.js"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2
+}
